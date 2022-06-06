@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.DescriptionFragment"
+    android:id="@+id/descriptionFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/descHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:background="#0F0F14"
+        android:padding="8dp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/descPoster"
+            android:layout_width="160dp"
+            android:layout_height="240dp"
+
+            android:layout_margin="8dp"
+            tools:background="#F44336"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/descTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            tools:text="Pulp Fiction"
+            android:textColor="@color/white"
+            android:fontFamily="@font/bignoodletitling"
+            android:textSize="24dp"
+            android:gravity="center"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/descPoster"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:padding="8dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/descPoster"
+            app:layout_constraintTop_toBottomOf="@id/descTitle">
+
+            <TextView
+                android:id="@+id/descGenreTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="8dp"
+                android:fontFamily="@font/bignoodletitling"
+                android:gravity="center"
+                android:text="GENRE"
+                android:textColor="#99FFFFFF"
+                android:textSize="14sp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/descGenre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:fontFamily="@font/robotoregular"
+                android:gravity="center"
+                android:textColor="#CCFFFFFF"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/descGenreTitle"
+                tools:text="Crime, Drama" />
+
+            <TextView
+                android:id="@+id/descDirectorTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="8dp"
+
+                android:fontFamily="@font/bignoodletitling"
+                android:gravity="center"
+                android:text="DIRECTOR"
+                android:textColor="#99FFFFFF"
+                android:textSize="14sp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/descGenre" />
+
+            <TextView
+                android:id="@+id/descDirector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:fontFamily="@font/robotoregular"
+                android:gravity="center"
+                android:textColor="#CCFFFFFF"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/descDirectorTitle"
+                tools:text="Quentin Tarantino" />
+
+            <TextView
+                android:id="@+id/descYearTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="8dp"
+
+                android:fontFamily="@font/bignoodletitling"
+                android:gravity="center"
+                android:text="YEAR"
+                android:textColor="#99FFFFFF"
+                android:textSize="14sp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/descDirector" />
+
+            <TextView
+                android:id="@+id/descYear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:fontFamily="@font/robotoregular"
+                android:gravity="center"
+                android:textColor="#CCFFFFFF"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/descYearTitle"
+                tools:text="1994" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            android:padding="8dp"
+            android:background="#0F0F14"
+
+            app:layout_constraintTop_toBottomOf="@id/descHeader"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/descFilmActorsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/bignoodletitling"
+                android:gravity="center"
+                android:text="Actors"
+                android:textColor="#99FFFFFF"
+                android:textSize="14sp"
+                android:layout_margin="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/descFilmActors"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:fontFamily="@font/robotoregular"
+                android:gravity="center"
+                android:textColor="#CCFFFFFF"
+                android:textSize="16sp"
+                tools:text="John Travolta, Uma Thurman, Samuel L. Jackson"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/descFilmActorsTitle" />
+
+            <TextView
+                android:id="@+id/descFilmWritersTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/bignoodletitling"
+                android:gravity="center"
+                android:text="Writer"
+                android:textColor="#99FFFFFF"
+                android:textSize="14sp"
+                android:layout_margin="8dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/descFilmActors" />
+
+            <TextView
+                android:id="@+id/descFilmWriters"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:fontFamily="@font/robotoregular"
+                android:gravity="center"
+                android:textColor="#CCFFFFFF"
+                android:textSize="16sp"
+                tools:text="Quentin Tarantino, Roger Avary"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/descFilmWritersTitle" />
+
+            <TextView
+                android:id="@+id/descFilmCountryTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/bignoodletitling"
+                android:gravity="center"
+                android:text="Country"
+                android:textColor="#99FFFFFF"
+                android:textSize="14sp"
+                android:layout_margin="8dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/descFilmWriters" />
+
+            <TextView
+                android:id="@+id/descFilmCountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:fontFamily="@font/robotoregular"
+                android:gravity="center"
+                android:textColor="#CCFFFFFF"
+                android:textSize="16sp"
+                tools:text="United States"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/descFilmCountryTitle" />
+
+            <TextView
+                android:id="@+id/descFilmRealisedTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/bignoodletitling"
+                android:gravity="center"
+                android:text="Released"
+                android:textColor="#99FFFFFF"
+                android:textSize="14sp"
+                android:layout_margin="8dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/descFilmCountry" />
+
+            <TextView
+                android:id="@+id/descFilmRealised"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:fontFamily="@font/robotoregular"
+                android:gravity="center"
+                android:textColor="#CCFFFFFF"
+                android:textSize="16sp"
+                tools:text="14 Oct 1994"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/descFilmRealisedTitle" />
+
+            <TextView
+                android:id="@+id/descFilmRuntimeTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/bignoodletitling"
+                android:gravity="center"
+                android:text="Runtime"
+                android:textColor="#99FFFFFF"
+                android:textSize="14sp"
+                android:layout_margin="8dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/descFilmRealised" />
+
+            <TextView
+                android:id="@+id/descFilmRuntime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:fontFamily="@font/robotoregular"
+                android:gravity="center"
+                android:textColor="#CCFFFFFF"
+                android:textSize="16sp"
+                tools:text="154 min"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/descFilmRuntimeTitle" />
+
+            <TextView
+                android:id="@+id/descFilmUSABoxOfficeTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/bignoodletitling"
+                android:gravity="center"
+                android:text="USA Box Office"
+                android:textColor="#99FFFFFF"
+                android:textSize="14sp"
+                android:layout_margin="8dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/descFilmRuntime" />
+
+            <TextView
+                android:id="@+id/descFilmUSABoxOffice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:fontFamily="@font/robotoregular"
+                android:gravity="center"
+                android:textColor="#CCFFFFFF"
+                android:textSize="16sp"
+                tools:text="$107,928,762"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/descFilmUSABoxOfficeTitle" />
+
+            <TextView
+                android:id="@+id/descFilmAwardsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/bignoodletitling"
+                android:gravity="center"
+                android:text="Awards"
+                android:textColor="#99FFFFFF"
+                android:textSize="14sp"
+                android:layout_margin="8dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/descFilmUSABoxOffice" />
+
+            <TextView
+                android:id="@+id/descFilmAwards"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:fontFamily="@font/robotoregular"
+                android:gravity="center"
+                android:textColor="#CCFFFFFF"
+                android:textSize="16sp"
+                tools:text="Won 1 Oscar. 70 wins and 75 nominations total"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/descFilmAwardsTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

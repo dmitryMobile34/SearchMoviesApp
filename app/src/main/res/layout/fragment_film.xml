@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/filmFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="#8BC34A"
+    android:background="#0F0F14"
+    tools:context=".fragments.FilmFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/filmHeader"
+        android:layout_width="match_parent"
+        android:layout_height="336dp"
+
+        android:background="#0F0F14"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="#FFEB3B">
+
+        <ImageView
+            android:id="@+id/posterBack"
+            android:layout_width="match_parent"
+            android:layout_height="232dp"
+
+            android:background="#0F0F14"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="#FF5722" />
+
+        <ImageView
+            android:id="@+id/posterMain"
+            android:layout_width="160dp"
+            android:layout_height="240dp"
+
+            android:background="#0F0F14"
+            app:layout_constraintBottom_toTopOf="@id/filmTitle"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:background="#673AB7" />
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+
+            android:layout_margin="24dp"
+            android:src="@drawable/ic_backbutton"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/filmTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="#0F0F14"
+            android:fontFamily="@font/login"
+            android:gravity="center"
+
+            android:padding="16dp"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            tools:background="#009688"
+            tools:text="Pulp Fiction" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/filmBody"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:layout_margin="8dp"
+        android:background="#0F0F14"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filmHeader">
+
+
+        <LinearLayout
+            android:id="@+id/scoreValues"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/scoreImdb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:fontFamily="@font/login"
+                android:gravity="center"
+                android:textColor="#ECC700"
+                android:textSize="24sp"
+                tools:text="7.9" />
+
+            <TextView
+                android:id="@+id/scoreMetacritic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:fontFamily="@font/login"
+
+                android:gravity="center"
+                android:textColor="#ECC700"
+                android:textSize="24sp"
+
+                tools:text="92" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scoreTitles"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+
+            android:padding="8dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/scoreValues">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+
+                android:layout_weight="1"
+
+                android:gravity="center"
+                android:src="@drawable/imdblogo" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+
+                android:layout_weight="1"
+
+                android:gravity="center"
+                android:src="@drawable/metacriticlogo" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/firstLaneTitles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/scoreTitles">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+
+                android:fontFamily="@font/bignoodletitling"
+                android:gravity="center"
+                android:text="GENRE"
+                android:textColor="#99FFFFFF"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+
+                android:fontFamily="@font/bignoodletitling"
+                android:gravity="center"
+                android:text="DIRECTOR"
+                android:textColor="#99FFFFFF"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+
+                android:fontFamily="@font/bignoodletitling"
+                android:gravity="center"
+                android:text="YEAR"
+                android:textColor="#99FFFFFF"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/firstLaneValues"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:padding="8dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/firstLaneTitles">
+
+            <TextView
+                android:id="@+id/filmGenre"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center"
+
+                android:layout_weight="1"
+                android:fontFamily="@font/robotoregular"
+                android:gravity="center"
+                android:textColor="#CCFFFFFF"
+                android:textSize="16sp"
+                tools:text="Crime, Drama" />
+
+            <TextView
+                android:id="@+id/filmDirector"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center"
+
+                android:layout_weight="1"
+                android:fontFamily="@font/robotoregular"
+                android:gravity="center"
+                android:textColor="#CCFFFFFF"
+                android:textSize="16sp"
+                tools:text="Quentin Tarantino" />
+
+            <TextView
+                android:id="@+id/filmYear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center"
+
+                android:layout_weight="1"
+                android:fontFamily="@font/robotoregular"
+                android:gravity="center"
+                android:textColor="#CCFFFFFF"
+                android:textSize="16sp"
+                tools:text="1994" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/plotTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/bignoodletitling"
+
+            android:gravity="center"
+
+            android:padding="8dp"
+            android:text="PLOT"
+            android:textColor="#99FFFFFF"
+            android:textSize="14sp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/firstLaneValues" />
+
+        <TextView
+            android:id="@+id/filmPlot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/robotoregular"
+
+            android:gravity="left"
+            android:padding="8dp"
+            android:textColor="#CCFFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/plotTitle"
+            tools:text="The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption." />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
